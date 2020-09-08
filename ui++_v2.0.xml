@@ -54,9 +54,6 @@
         <Choice Option="Office 2016" Value="1" AlternateValue="B"/>
       </ChoiceInput>
     </Action>
-
-
-
     <!-- <Action Type="AppTree" Title="Please choose your software">
       <SoftwareSets>
         <Set Name="Default">
