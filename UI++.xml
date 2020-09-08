@@ -19,7 +19,7 @@
     </Action> -->
     <!-- ALTERADO ************************************************************************************************* -->
     <Action Type="Info" Name="myInfo" Title="Bem Vindo ao instalador personalizado da SGE" ShowCancel="True">
-      <![CDATA[Irá escolher o Organismo correspondente para melhor funcionamento. <br><br>Terá ainda a possibilidade de escolher alguns dos programas instalados automaticamente.<br><br><b>Alguma duvida, contactar o departamento de Sistemas da Secretaria Geral, ou contactar o apoio informática</b><br><br>apoio.informatica@sgeconomia.gov.pt<br>]]>
+      <![CDATA[Irá escolher o Organismo correspondente para melhor funcionamento. <br><br><b>Alguma dúvida, contactar o departamento de Sistemas da Secretaria Geral, ou contactar o apoio informática</b><br><br>apoio.informatica@sgeconomia.gov.pt<br>]]>
     </Action>
 
     <!--*INICIO ******************************** PASSWORD POR ORGANISMO PARA EVITAR INSTALAÇÃO DE ORGANISMOS DIFERENTES CASO QUEIRAM ********************************-->
