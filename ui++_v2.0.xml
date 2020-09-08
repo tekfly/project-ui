@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UIpp Title="OSD - SGE" Icon="UI++2.ico"> <!-- name -->
-  <Software> <!--SOFTWARE - BUILD IN (DON'T CHANGE IT!!!!!!)-->
+  <Software> <!--SOFTWARE - BUILD IN (DON'T CHANGE IT!!!!!!) teste   -->
     <!-- <Application Id="59426C81-2638-47AF-82A7-AFEA795B47B7" Label="Adobe Reader XI" Name="Adobe Reader XI"/>
     <Application Id="D30B903C-95ED-4AC9-8256-EFADD02FAFF3" Label="Notepad++ v6.6.8" Name="Notepad++ v6.6.8" />
     <Package Id="9EBF5537-6A81-4651-86D4-4E51C8899F4D" Label=".NET Framework 4.5.2" PkgID="ONE000100" ProgramName="Install .Net 4.5.2" />
