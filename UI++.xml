@@ -47,7 +47,10 @@
         <!-- <Choice Option="3" Value="3" AlternateValue="D" />
         <Choice Option="4" Value="4" AlternateValue="E" /> -->
       </ChoiceInput>
+      <CheckboxInput Variable="instalaroffice" Question="Pretende instalar o Office?" CheckedValue="true" UncheckedValues="false" Default="false"/>
+      <CheckboxInput Variable="instalarvpn" Question="Pretende instalar o Cliente de VPN?" CheckedValue="true" UncheckedValue="false" Default="false"/>
     </Action>
+    <Action Type="Input" Name="myInput2" Title="Secretaria Geral - Ministério da Economia" ShowCancel="true" ShowBack="True" Condition='"%instalaroffice%" = "true"'>
       <ChoiceInput Variable="ArqOffice" AlternateVariable="ArqOfficeB" Question="Por favor escolha a arquitetura do Office" Required="True" Default="%CurrentTier%">
         <Choice Option="64bits" Value="0" AlternateValue="A"/>
         <Choice Option="32bits" Value="1" AlternateValue="B"/>
@@ -81,7 +84,7 @@
 
 <!-- ********************* PRE FLIGHT TEST -->
 <ActionGroup>
-  <Action Type="Preflight" Title="Preflight checks" ShowOnFailureOnly="False" ShowBack="True" ShowCancel="True">
+  <Action Type="Preflight" Title="Verificações" ShowOnFailureOnly="False" ShowBack="True" ShowCancel="True">
   <Check Text="Ligação por cabo" CheckCondition='"%XWLANDisconnected%" = "True"' ErrorDescription="Ligação por cabo recomendada" />
   <Check Text="Ligado a corrente" CheckCondition='"%XOnBattery%" = "False"' ErrorDescription="Ligar a maquina a corrente" />
   </Action>
