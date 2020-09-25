@@ -80,11 +80,9 @@
 
 <!-- ********************* PRE FLIGHT TEST -->
 <ActionGroup>
-  <Action Type="Preflight" Title="Preflight checks" ShowOnFailureOnly="False" ShowBack="True" ShowCancel="True">
-  <Check Text="WLAN Disconnected" CheckCondition='"%XWLANDisconnected%" = "True"' ErrorDescription="Ligação por cabo recomendada" />
-  <Check Text="Not on battery" CheckCondition='"%XOnBattery%" = "False"' ErrorDescription="Ligar a maquina a corrente" />
-  <Check Text="Minimum memory > 4GB" CheckCondition='%XHWMemory% >= 4096' />
-  <Check Text="CPU Supports Windows 8+" CheckCondition='%XCPUPAE% AND %XCPUNX% AND %XCPUSSE2% = True' />
+  <Action Type="Verificações" Title="Preflight checks" ShowOnFailureOnly="False" ShowBack="True" ShowCancel="True">
+  <Check Text="Ligação por cabo" CheckCondition='"%XWLANDisconnected%" = "True"' ErrorDescription="Ligação por cabo recomendada" />
+  <Check Text="Ligado a corrente" CheckCondition='"%XOnBattery%" = "False"' ErrorDescription="Ligar a maquina a corrente" />
   </Action>
 </ActionGroup>
 
