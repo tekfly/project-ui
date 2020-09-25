@@ -47,6 +47,7 @@
         <!-- <Choice Option="3" Value="3" AlternateValue="D" />
         <Choice Option="4" Value="4" AlternateValue="E" /> -->
       </ChoiceInput>
+    </Action>
       <ChoiceInput Variable="ArqOffice" AlternateVariable="ArqOfficeB" Question="Por favor escolha a arquitetura do Office" Required="True" Default="%CurrentTier%">
         <Choice Option="64bits" Value="0" AlternateValue="A"/>
         <Choice Option="32bits" Value="1" AlternateValue="B"/>
@@ -80,7 +81,7 @@
 
 <!-- ********************* PRE FLIGHT TEST -->
 <ActionGroup>
-  <Action Type="Verificações" Title="Preflight checks" ShowOnFailureOnly="False" ShowBack="True" ShowCancel="True">
+  <Action Type="Preflight" Title="Preflight checks" ShowOnFailureOnly="False" ShowBack="True" ShowCancel="True">
   <Check Text="Ligação por cabo" CheckCondition='"%XWLANDisconnected%" = "True"' ErrorDescription="Ligação por cabo recomendada" />
   <Check Text="Ligado a corrente" CheckCondition='"%XOnBattery%" = "False"' ErrorDescription="Ligar a maquina a corrente" />
   </Action>
