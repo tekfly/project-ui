@@ -44,10 +44,9 @@
         <Choice Option="SG - Secretaria Geral" Value="0" AlternateValue="A"/>
         <Choice Option="DGAE" Value="1" AlternateValue="B" />
         <Choice Option="IPAC" Value="2" AlternateValue="C" />
-        <!-- <Choice Option="3" Value="3" AlternateValue="D" />
-        <Choice Option="4" Value="4" AlternateValue="E" /> -->
       </ChoiceInput>
     </Action>
+    <Action Type="Input" Name="officeInput" Title="Opções de Office" ShowCancel="true" ShowBack="true">
       <ChoiceInput Variable="ArqOffice" AlternateVariable="ArqOfficeB" Question="Por favor escolha a arquitetura do Office" Required="True" Default="%CurrentTier%">
         <Choice Option="64bits" Value="0" AlternateValue="A"/>
         <Choice Option="32bits" Value="1" AlternateValue="B"/>
