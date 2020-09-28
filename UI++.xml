@@ -41,11 +41,12 @@
 
     <Action Type="Input" Name="myInput" Title="Secretaria Geral - Ministério da Economia" ShowCancel="true" ShowBack="True">
       <ChoiceInput Variable="Organismo" AlternateVariable="OrganismoB" Question="Por favor escolha o organismo correspondente" Required="True" Default="%CurrentTier%">
-        <Choice Option="SG - Secretaria Geral" Value="0" AlternateValue="A"/>
-        <Choice Option="DGAE" Value="1" AlternateValue="B" />
-        <Choice Option="IPAC" Value="2" AlternateValue="C" />
+        <Choice Option="1-SG - Secretaria Geral" Value="0" AlternateValue="A"/>
+        <Choice Option="2-DGAE" Value="1" AlternateValue="B" />
+        <Choice Option="3-IPAC" Value="2" AlternateValue="C" />
+        <!-- <Choice Option="4-SEM DOMINIO" Value="50" AlternateValue="Z"/> -->
       </ChoiceInput>
-      <CheckboxInput Variable="instalaroffice" Question="Pretende instalar o Office?" CheckedValue="true" UncheckedValues="false" Default="false"/>
+      <CheckboxInput Variable="instalaroffice" Question="Pretende instalar o Office?" CheckedValue="true" UncheckedValues="false" Default="true"/>
       <CheckboxInput Variable="instalarvpn" Question="Pretende instalar o Cliente de VPN?" CheckedValue="true" UncheckedValue="false" Default="false"/>
     </Action>
     <Action Type="Input" Name="officeInput" Title="Opções de Office" ShowCancel="true" ShowBack="true" Condition='"%instalaroffice%" = "true"'>
