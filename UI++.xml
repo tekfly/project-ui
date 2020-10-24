@@ -40,25 +40,29 @@
 
 
     <Action Type="Input" Name="myInput" Title="Secretaria Geral - Ministério da Economia" ShowCancel="true" ShowBack="True">
-      <ChoiceInput Variable="Organismo" AlternateVariable="OrganismoB" Question="Por favor escolha o organismo correspondente" Required="True" Default="%CurrentTier%">
-        <Choice Option="SG - Secretaria Geral" Value="0" AlternateValue="A"/>
-        <Choice Option="DGAE" Value="1" AlternateValue="B" />
-        <Choice Option="IPAC" Value="2" AlternateValue="C" />
-        <!-- <Choice Option="3" Value="3" AlternateValue="D" />
-        <Choice Option="4" Value="4" AlternateValue="E" /> -->
+      <ChoiceInput Variable="Organismo" AlternateVariable="OrganismoB" Question="Por favor escolha o organismo correspondente" Required="True" Default="0">
+        <Choice Option="1-SG - Secretaria Geral" Value="0" AlternateValue="A"/>
+        <Choice Option="2-DGAE" Value="1" AlternateValue="B" />
+        <Choice Option="3-IPAC" Value="2" AlternateValue="C" />
+        <!-- <Choice Option="4-SEM DOMINIO" Value="50" AlternateValue="Z"/> -->
       </ChoiceInput>
-      <CheckboxInput Variable="instalaroffice" Question="Pretende instalar o Office?" CheckedValue="true" UncheckedValues="false" Default="false"/>
-      <CheckboxInput Variable="instalarvpn" Question="Pretende instalar o Cliente de VPN?" CheckedValue="true" UncheckedValue="false" Default="false"/>
+      <CheckboxInput Variable="instalaroffice" Question="Pretende instalar o Microsoft Office?" CheckedValue="true" UncheckedValues="false" Default="true"/>
     </Action>
-    <Action Type="Input" Name="myInput2" Title="Secretaria Geral - Ministério da Economia" ShowCancel="true" ShowBack="True" Condition='"%instalaroffice%" = "true"'>
-      <ChoiceInput Variable="ArqOffice" AlternateVariable="ArqOfficeB" Question="Por favor escolha a arquitetura do Office" Required="True" Default="%CurrentTier%">
+    <Action Type="Input" Name="officeInput" Title="Opções de Office" ShowCancel="true" ShowBack="true" Condition='"%instalaroffice%" = "true"'>
+      <ChoiceInput Variable="ArqOffice" AlternateVariable="ArqOfficeB" Question="Por favor escolha a arquitetura do Office" Required="True" Default="0">
         <Choice Option="64bits" Value="0" AlternateValue="A"/>
         <Choice Option="32bits" Value="1" AlternateValue="B"/>
       </ChoiceInput>
-      <ChoiceInput Variable="VersionOffice" AlternateValue="VersionOfficeB" Question="Por favor escolha a Versão do Office" Required="True" Default="%CurrentTier%">
+      <ChoiceInput Variable="VersionOffice" AlternateValue="VersionOfficeB" Question="Por favor escolha a Versão do Office" Required="True" Default="0">
         <Choice Option="Office 365" Value="0" AlternateValue="A" />
         <Choice Option="Office 2016" Value="1" AlternateValue="B"/>
       </ChoiceInput>
+    </Action>
+
+    <Action Type="Input" Name="optional_soft" Title="Software opcional" ShowBack="true" ShowCancel="true">
+      <CheckboxInput Variable="instalarvpn" Question="Cliente de VPN" CheckedValue="true" UncheckedValue="false" Default="false"/>
+      <CheckboxInput Variable="netframework" Question="Microsoft Net FrameWork" CheckedValue="true" UncheckedValue="false" Default="false"/>
+      <CheckboxInput Variable="access2010" Question="Microsoft Access 2010" CheckedValue="true" UncheckedValue="false" Default="false" Condition='"%Organismo%" = "2"'/>
     </Action>
 
 
